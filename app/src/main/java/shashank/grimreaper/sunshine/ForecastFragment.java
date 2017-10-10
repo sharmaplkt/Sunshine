@@ -80,6 +80,7 @@ public class ForecastFragment extends Fragment {
         FetchWeatherTask fetchWeather = new FetchWeatherTask();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String location = prefs.getString(getString(R.string.pref_location_key),getString(R.string.pref_location_default));
+        //Providing location before calling openweathermap API
         fetchWeather.execute(location);
     }
 
